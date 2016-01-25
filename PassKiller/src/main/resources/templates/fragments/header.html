@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head id="header" th:fragment="header">
+<link href="/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+	th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
+	rel="stylesheet" media="screen" />
+
+<script src="/webjars/jquery/2.1.4/jquery.min.js"
+	th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+</head>
+<body>
+	<div th:fragment="header">
+		<nav class="navbar navbar-static-top navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target=".nav-collapse">
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/index">PassKiller</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li th:classappend="${page == 'home' ? 'active' : ''}"><a
+							href="/index" th:href="@{/}">Home</a></li>
+						<li th:classappend="${page == 'challenges' ? 'active' : ''}"><a
+							href="challenge" th:href="@{/challenge}">Challenges</a></li>
+						<li th:classappend="${page == 'contact' ? 'active' : ''}"><a
+							href="contact" th:href="@{/contact}">Contact Us</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li th:if="${#authorization.expression('!isAuthenticated()')}"><a
+							href="/login" th:href="@{/login}">Sign in</a></li>
+						<li th:if="${#authorization.expression('isAuthenticated()')}"><a
+							href="/logout" th:href="@{/logout}">Logout</a></li>
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+		</nav>
+	</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+	th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
+	rel="stylesheet" media="screen" />
+
+<script src="/webjars/jquery/2.1.4/jquery.min.js"
+	th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+<script src="/webjars/bootstrap/3.3.4/js/jquery.min.js"
+	th:src="@{/webjars/bootstrap/3.3.4/js/jquery.min.js}"></script>
+
+<link href="/webjars/font-awesome/4.3.0/css/font-awesome.min.css"
+	th:href="@{/webjars/font-awesome/4.3.0/css/font-awesome.min.css}"
+	rel="stylesheet" media="screen" />
+
+<link href="css/sticky-footer-navbar.css" rel="stylesheet" />
+</head>
+<body>
+	<div th:include="fragments/header :: header"></div>
+	<div class="container">
+		<div class="page-header">
+			<h1>Password Killer</h1>
+		</div>
+		<p class="lead">Welcome to use PassKiller. It supports Web-based request password and RESTFul web service.</p>
+		<p>Use <a href="/challenge">Web-based request</a></p>
+		<p>Use <a href="/challenge/search/findByName?name=LN">RESTful Web Services to request "LN", for example.</a></p>
+		<br/>
+		<p>Login with the following credential, which is based on memory authentication in Spring Security </p>
+		<p>Username: user</p>
+		<p>Password: pass</p>
+		<br/>
+		<p>In memory H2 is used as Database</p>
+		<p>Access through <a href="/console">Web Console with "ADMIN" role account</a></p>
+		<p>Username: admin</p>
+		<p>Password: pass</p>
+	</div>
+
+	<footer class="footer" id="footer" th:fragment="footer">
+		<div class="container">
+			<p class="text-muted">
+				<i class="fa fa-copyright"></i> Ze Ni, armsir33@gmail.com Free Distribution
+			</p>
+		</div>
+	</footer>
+</body>
+
+</html>
