@@ -14,3 +14,5 @@ The memory H2 is used as Database
 Access through href="/console" Web Console with "ADMIN" role account
   Username: admin
   Password: pass
+  
+In addition, PassKill can be used as sample project integrating Spring, Spring MVC, Spring Security, Spring Data JPA, Hiberate, Bootstrap, Thymeleaf.
