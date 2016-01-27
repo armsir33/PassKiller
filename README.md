@@ -4,6 +4,7 @@ Password Requested Services
 Welcome to use PassKiller. It supports Web-based request password and RESTFul web service.
 
 Use href="/challenge" Web-based request
+
 Use href="/challenge/search/findByName?name=LN" RESTful Web Services to request "LN", for example.
 
 Login with the following credential, which is based on memory authentication in Spring Security
